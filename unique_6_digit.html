@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="lodash.js">
+        function generateNum () {
+            var min = 100000;
+            var max = 999999;
+  var randNumber = Math.floor(Math.random()*(max - min + 1)) + min;
+  if (randNumber == max) {
+    randNumber += generateNum(min, max);
+  }
+  return randNumber;
+}
+var x = generateNum()
+console.log(x)
+    </script>
+</body>
+</html>
