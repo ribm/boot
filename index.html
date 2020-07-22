@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+function attach(sting , callback){
+    return callback(sting);
+}
+var s = ""
+var t = attach("1..", function(str1){
+    s+=str1
+    attach("2..", function(str1){
+        s+=str1
+        console.log(s)
+        attach("3..", function(str1){
+            s+=str1
+            console.log(s)
+            attach("4..", function(str1){
+                s+=str1
+                console.log(s)
+                attach("5..", function(str1){
+                    s+=str1
+                    console.log(s)
+                    attach("6..",function(str1){
+                        s+=str1
+                        console.log(s)
+                        attach("7..",function(str1){
+                            s+=str1
+                            console.log(s)
+                            attach("8..",function(str1){
+                                s+=str1
+                                console.log(s)
+                                attach("9..",function(str1){
+                                    s+=str1
+                                    console.log(s)
+                                    attach("GOOD_MORNING",function(str1){
+                                        s+=str1
+                                        console.log(s)
+                        
+                                     })
+                                })
+                            })
+                        
+                        })
+
+                    })
+                })
+            })
+
+        })
+    })
+    
+
+return s
+});
+console.log(t)
+    </script>
+</body>
+</html>
